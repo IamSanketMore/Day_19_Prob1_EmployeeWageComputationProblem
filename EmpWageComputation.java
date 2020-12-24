@@ -1,35 +1,35 @@
 public class EmpWageComputation
 {
+
+        public static final int Full_Time=1;
+        public static final int Part_Time=2;
+
 	public static void main(String args [])
 	{
 		System.out.println("--------------------------------------------------------------------");
 		System.out.println("Welcome to Employee Wage Computation Program on Master Branch");
 		System.out.println("--------------------------------------------------------------------");
 
-
 		int Emp_Hrs=0;
                 int Emp_Rate_Per_Hrs=20;
                 int Per_Day_Salary=0;
-                int Full_Time=1;
-                int Part_Time=2;
 
                 int Result=(int)Math.floor(Math.random()*10)%3;
                 System.out.println("Result is :-"+Result);
 
-                if(Result == Full_Time )
+                switch ((int)Result)
                 {
+                        case Full_Time :
                         System.out.println("Employee is Presnt and Its Full Time Employee");
                         Emp_Hrs=8;
-                }
+                        break;
 
-                else if(Result == Part_Time)
-                {
+                        case Part_Time :
                         System.out.println("Employee is Presnt and Its Part Time Employee");
                         Emp_Hrs=4;
-                }
+                        break;
 
-                else
-                {
+                        default :
                         System.out.println("Employee is Absent");
                         Emp_Hrs=0;
                         Per_Day_Salary=0;
@@ -37,7 +37,5 @@ public class EmpWageComputation
 
                 Per_Day_Salary = (Emp_Hrs*Emp_Rate_Per_Hrs);
                 System.out.println("Per Day Salary is :-"+Per_Day_Salary);
-
-
-	}
+        }
 }
