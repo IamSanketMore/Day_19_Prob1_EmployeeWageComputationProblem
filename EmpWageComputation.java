@@ -2,20 +2,30 @@ public class EmpWageComputation
 {
 	public static void main(String args [])
 	{
+		System.out.println("--------------------------------------------------------------------");
 		System.out.println("Welcome to Employee Wage Computation Program on Master Branch");
-		 int Present=1;
+		System.out.println("--------------------------------------------------------------------");
 
-                int empCheck=(int)Math.floor(Math.random()*10)%2;
-                System.out.println("Random value "+empCheck);
+		int Emp_Hrs=0;
+                int Emp_Rate_Per_Hrs=20;
+                int Per_Day_Salary=0;
+                int Full_Time=1;
 
-                if(empCheck==Present)
+                int Result=(int)Math.floor(Math.random()*10)%2;
+                System.out.println("Result is :-"+Result);
+
+                if(Result == Full_Time)
                 {
-                        System.out.println("Employpee is Presnt");
+                        Emp_Hrs=8;
                 }
                 else
                 {
-                        System.out.println("Employee is Absent");
+                        Per_Day_Salary=0;
                 }
+                Per_Day_Salary = (Emp_Hrs*Emp_Rate_Per_Hrs);
+                System.out.println("Employee per Day Salary is :-"+Per_Day_Salary);
+
+
 
 	}
 }
